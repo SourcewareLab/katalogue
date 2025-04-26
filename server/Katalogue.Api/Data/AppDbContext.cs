@@ -1,9 +1,11 @@
 using Katalogue.Api.Data.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Katalogue.Api.Data;
 
-public class AppDbContext : DbContext
+public class AppDbContext: IdentityDbContext<IdentityUser, IdentityRole, string>
 {
     public DbSet<Game> Games { get; set; }
 

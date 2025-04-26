@@ -1,6 +1,7 @@
 using Carter;
 using Katalogue.Api;
 using Katalogue.Api.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 
@@ -24,6 +25,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 app.MapCarter();
+app.MapIdentityApi<IdentityUser>();
 
 app.Run();
 

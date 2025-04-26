@@ -9,8 +9,9 @@ public class GameEndpoint : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("/api/games", GetGames);
+        app.MapGet("/api/games", GetGames).RequireAuthorization();
         app.MapPost("/api/games", AddGame);
+        
     }
 
     private async Task<IResult> GetGames(IMediator mediator)
