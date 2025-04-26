@@ -1,5 +1,7 @@
 using Carter;
 using Katalogue.Api;
+using Katalogue.Api.Data;
+using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 
 //Build app
@@ -15,6 +17,10 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.MapScalarApiReference();
     app.UseCors("development");
+
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    await db.Database.MigrateAsync();
 }
 app.UseHttpsRedirection();
 app.MapCarter();
