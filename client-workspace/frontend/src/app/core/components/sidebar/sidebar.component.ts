@@ -35,7 +35,7 @@ export class SidebarComponent {
 
   // Bottom items
   bottomItems: SidebarItem[] = [
-    { icon: Settings, title: 'Settings', link: '/settings', iconProps: { size: 20 } },
-    { icon: User, title: 'My Profile', link: '/profile', iconProps: { size: 20 } }
+    { icon: Settings, title: 'Settings', link: '/user/settings', iconProps: { size: 20 } },
+    { icon: User, title: 'My Profile', link: '/user/profile', iconProps: { size: 20 } }
   ];
 }
