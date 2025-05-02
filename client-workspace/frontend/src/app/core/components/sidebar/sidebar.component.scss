@@ -1,9 +1,5 @@
-$sidebar-transition: 0.3s ease-in-out;
-$text-fade-delay: 3s;
-$text-fade-duration: 0.2s;
-
 .sidebar {
-  transition: width $sidebar-transition;
+  transition: width 0.3s ease-in-out;
 
   // Hide scrollbar but allow scrolling
   &-scroll {

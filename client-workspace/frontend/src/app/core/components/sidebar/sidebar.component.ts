@@ -1,14 +1,15 @@
-import { Component, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
 import { SidebarItem } from './sidebar.model';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import {Book, ChevronLeft, ChevronRight, Home, LucideAngularModule, Mail, MessageSquare, Search, Settings, User} from 'lucide-angular'
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterLink, LucideAngularModule, CommonModule],
+  imports: [RouterLink,RouterLinkActive, LucideAngularModule, CommonModule],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss'
+  styleUrl: './sidebar.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidebarComponent {
   isExpanded = signal(false);
