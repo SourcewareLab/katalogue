@@ -1,0 +1,32 @@
+<header class="bg-white dark:bg-gray-800 shadow-md h-14 flex-shrink-0 z-10">
+  <div class="container mx-auto px-4 h-full flex items-center justify-between">
+    <div class="text-xl font-bold text-indigo-600 dark:text-indigo-400">
+      Katalogue
+    </div>
+
+    <div class="flex-1 mx-4 max-w-md hidden md:block">
+      <input
+        type="text"
+        placeholder="Search Titles, users, forums..."
+        class="w-full px-4 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 text-sm"
+         >
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700" aria-label="Create Post">
+        <lucide-angular [img]="Plus" [size]="20"></lucide-angular>
+      </button>
+      <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 md:hidden" aria-label="Search">
+        <lucide-angular [img]="Search" [size]="20"></lucide-angular>
+      </button>
+      <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700" aria-label="Notifications">
+        <lucide-angular [img]="Bell" [size]="20"></lucide-angular>
+      </button>
+      <button class="p-1 rounded-full border-2 border-transparent hover:border-indigo-500 dark:hover:border-indigo-400" aria-label="User Menu">
+        <div class="w-8 h-8 rounded-full bg-indigo-200 dark:bg-indigo-600 flex items-center justify-center">
+          <lucide-angular [img]="User" [size]="16" color="#ffffff"></lucide-angular>
+        </div>
+      </button>
+    </div>
+  </div>
+</header>
