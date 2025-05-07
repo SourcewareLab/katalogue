@@ -8,7 +8,7 @@
   "scripts": {
     "generate-sdk": "openapi-generator-cli generate -g typescript-angular -i http://localhost:5286/openapi/v1.json -o ./client-sdk --additional-properties=ngVersion=19,npmName=@katalogue/client-sdk,npmVersion=0.0.0,modelPropertyNaming=camelCase,fileNaming=kebab-case,stringEnums=true,withInterfaces=true,",
     "dev": "cd frontend && npm run start",
-    "dev:full":"npm run generate-sdk && npm run build:sdk && npm run dev",
+    "dev:full": "npm run generate-sdk && npm run build:sdk && npm run dev",
     "build:sdk": "cd client-sdk && npm run build"
   },
   "author": "",
